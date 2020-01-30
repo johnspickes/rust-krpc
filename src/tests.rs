@@ -1,5 +1,8 @@
+#[allow(unused_imports)]
 use crate::rllkrpc::Rpc;
+#[allow(unused_imports)]
 use std::thread::sleep;
+#[allow(unused_imports)]
 use std::time::Duration;
 
 #[test]
