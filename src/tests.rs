@@ -1,6 +1,6 @@
-use crate::rllkrpc::Krpc;
+use crate::rllkrpc::Rpc;
 
 #[test]
 fn connects_ok() {
-    let _rpc = Krpc::connect("127.0.0.1:50000").unwrap();
+    let _rpc = Rpc::connect("10.0.0.126:50000").unwrap();
 }
