@@ -1,5 +1,5 @@
 #[allow(unused_imports)]
-use crate::rllkrpc::Rpc;
+use crate::rllkrpc::{Tcp, Streams};
 #[allow(unused_imports)]
 use std::thread::sleep;
 #[allow(unused_imports)]
@@ -10,7 +10,8 @@ fn connects_ok() {
 
     println!("Connecting...");
 
-    let _rpc = Rpc::connect("10.0.0.126:50000").unwrap();
+    let mut _rpc = Tcp::connect("10.0.0.126:50000").unwrap();
+    let _streams = Streams::connect(&mut _rpc).unwrap();
 
     println!("Connected!");
 
